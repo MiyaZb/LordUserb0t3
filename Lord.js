@@ -118,7 +118,7 @@ let numbernye = "0"
 let simbolnya = "•"
 let petik = '```'
 let enter = '\n'
-let notnot = `NOTE:${enter}Jika whatsapp mod kamu belum support button silahkan tonton video ini https://youtu.be/ERGID4Fmo9w`
+let notnot = `NOTE:${enter}Jika whatsapp mod kamu belum support button silahkan berak 3 jam di toilet`
 let url_gif = setting.url_gif
 let public_mode = setting. public_mode
 let mlistmsg = false 
@@ -447,8 +447,8 @@ var waktoo = date.getHours();
 Isi sendiri
 
 Minat? Pm wa.me/${owner_number}`,
-					ban: 'Maaf Lord Nomor Kamu Sudah Di Banned!',
-					error: 'Error Lord, Mungkin Lagi Diperbaiki',
+					ban: 'Sori bang lu ke ban',
+					error: 'Error bg, Mungkin Lagi Diperbaiki',
 					errorLink: 'Link Error Lord',
 					succes: '```[ ✓ ]``` Sukses Lord',
 					only: {
@@ -1267,11 +1267,11 @@ const checkWin = (sender) => {
 						}
     if (isCmd && msgFilter.isFiltered(from) && !isGroup) {
 						console.log(color('[CMD]','magenta'), color(moment(Ofc.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
-						return reply('Jangan Spam Lord')
+						return reply('Jangan Spam dong sayang')
 						} 
 					if (isCmd && msgFilter.isFiltered(from) && isGroup) {
 						console.log(color('[CMD]','magenta'), color(moment(Ofc.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
-						return reply('Jangan Spam Lord')
+						return reply('Jangan Spam dong sayang')
 					}
     if (autovn){
 						await Zeeone.updatePresence(from, Presence.recording)
@@ -1760,10 +1760,10 @@ Alasan : ${reason}`, [sender], true)
 										sendButLocation(from, sewabotkak(), `Sewa bot om?`,  thumbnail, gakloo,{})
 										break
 						case 'donasi':
-									reply('Isi sendiri')
+									reply('Ada nya dana bg, kalo mau donasi langsung ke owner aja hahaha')
 									break
 						case 'join':case 'joingc':
-									if (!q) return reply('Linknya?')
+									if (!q) return reply('Link nya mana bang')
 									if (!Ofc.key.fromMe && !isOwner) return reply(mess.only.owner)
 										if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return reply('Linknya Invalid Lord')
 										reply('Tunggu Sebentar Otw Masuk Group')
@@ -1775,7 +1775,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'kick': case 'headsot':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin) 
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`gw kan ga admin njir`)
 									kick(from, mentionUser)
 									break
 						case 'revoke': case 'resetlinkgc': case 'resetlink':
@@ -1783,12 +1783,12 @@ Alasan : ${reason}`, [sender], true)
 									if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin) 
 									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
 									Zeeone.query({ json: ['action', 'inviteReset', from], expect200: true })
-									reply(`Sukses Reset Link Group!`)
+									reply(`Oke Udah Bang`)
 									break
 						case 'linkgc': case 'gclink': case 'linkgrup': case 'linkgroup': case 'grouplink':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin)   
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`gw bukan admin njir`)
 									linkgc = await Zeeone.groupInviteCode (from)
 									yeh = `*https://chat.whatsapp.com/${linkgc}*`
 									Zeeone.sendMessage(from, {text: yeh,
@@ -1802,25 +1802,25 @@ Alasan : ${reason}`, [sender], true)
 									try {
 										if (!isGroup) return reply(mess.only.group)
 										if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin)  
-										if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+										if (!isBotGroupAdmins) return reply(`Kasi gw admin dulu`)
 										if (Ofc.message.extendedTextMessage === null || Ofc.message.extendedTextMessage === undefined) {
 											entah = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
 											response = await Zeeone.groupAdd(from, [entah])
 											o = response.participants[0]
 											let inv = (Object.values(o))
-											if(inv[0].code == 409) return reply('Target Sudah Di Didalam Group!')
+											if(inv[0].code == 409) return reply('Udah di dalam gc kek nya')
 											if(inv[0].code == 403) return reply('Eror, user private acc')
 											if(inv[0].code == 408) return reply('Eror, user baru saja keluar')
-											if(inv[0].code == 401) return reply('Eror, Karena Bot Di Block Oleh Target')
+											if(inv[0].code == 401) return reply('Eror, Karena karna di blok')
 												} else {
 													entah = Ofc.message.extendedTextMessage.contextInfo.participant
 													response = await Zeeone.groupAdd(from, [entah])
 													o = response.participants[0]
 													let inv = (Object.values(o))
-													if(inv[0].code == 409) return reply('Target Sudah Di Didalam Group!')
+													if(inv[0].code == 409) return reply('Udah di dalam gc kek nya')
 													if(inv[0].code == 403) return reply('Gagal, Karena Di Private')
 													if(inv[0].code == 408) return reply('Gagal, Karena Target Baru² Saja Keluar')
-													if(inv[0].code == 401) return reply('Gagal, Karena Bot Di Block Oleh Target')
+													if(inv[0].code == 401) return reply('Gagal, Karena gw di blok')
 												}
 											} catch {
 												return 
@@ -1959,7 +1959,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'setnamagrup': case 'setnamegrup': case 'setgrupname':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`Jadikan gw admin!`)
 									if (args.length == 0) return reply(`Penggunaan ${prefix + command} Alphabot Support`)
 										Zeeone.groupUpdateSubject(from, q)
 										.then((res) => reply(jsonformat(res)))
@@ -1968,7 +1968,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'setdesc': case 'setdesk': case 'setdeskripsi':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`Jadikan gw admin!`)
 									if (args.length == 0)  return reply(`Penggunaan ${prefix + command} Alphabot Support`)
 										Zeeone.groupUpdateDescription(from, q)
 										.then((res) => reply(jsonformat(res)))
@@ -1985,7 +1985,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'setppgrup':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`Jadikan gw admin dulu!`)
 									if (isQuotedImage) {
 										let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(Ofc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : Ofc
 										let media = await Zeeone.downloadMediaMessage(encmedia)
@@ -2054,7 +2054,7 @@ Alasan : ${reason}`, [sender], true)
 									break
 						case 'extend': case 'perpanjang':
 									if (!isSewa) return reply('Kamu belum sewa bot sebelumnya? klik #sewabot')
-									reply('Sedang Mengirim Pesan Perpanjangan Masa Sewa Ke Owner Bot')
+									reply('tar gw tanya owner')
 									Zeeone.sendMessage(`${owner_number}@s.whatsapp.net`, `Hai Owner, @${sender.split("@")[0]} Mau Memperpanjang Waktu Sewa Bot`, text, {contextInfo: {"mentionedJid" : [sender]}})
 									break
 						case 'sewa':{
@@ -2062,7 +2062,7 @@ Alasan : ${reason}`, [sender], true)
 									if(!isGroup) return reply(mess.only.group)
 									if (q === 'add') {
 										_sewa.addSewaGroup(from, args[1], sewa)
-										reply(`Sukses Lord`)
+										reply(`Sukses bang`)
 									} else if (q === 'del') {
 										sewa.splice(_sewa.getSewaPosition(from, sewa), 1)
 										fs.writeFileSync('./database/sewa.json', JSON.stringify(sewa))
@@ -2082,7 +2082,7 @@ Alasan : ${reason}`, [sender], true)
 									break
 						case 'sewacheck': case 'ceksewa':  case 'sewacek':
 									if (!isGroup) return reply(mess.only.group)
-									if (!isSewa) return reply(`Group ini tidak terdaftar dalam list sewabot. Ketik ${prefix}sewabot untuk info lebih lanjut`)
+									if (!isSewa) return reply(`Group ini ga terdaftar sewabot bg. Ketik ${prefix}sewabot klo mau info`)
 									let cekvip = ms(_sewa.getSewaExpired(from, sewa) - Date.now())
 									let sewenye = `「 *SEWA EXPIRE* 」
 
@@ -2093,7 +2093,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'antibadword': case 'nobadword':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group`)
+									if (!isBotGroupAdmins) return reply(`Jadikan w admin`)
 									if (args.length === 0) return reply(`Pilih on atau off`)
 									if (args[0] == 'on'){
 										if (isBadword) return reply(`Udah aktif Lord`)
@@ -2112,7 +2112,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'antilink':
 									if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin)
 										if (args[0].toLowerCase() === 'on'){
-											if (isAntiLink) return reply(`Sudah Di Aktifkan Sebelumnya!`)
+											if (isAntiLink) return reply(`udah aktif bang`)
 											antilink.push(from)
 											fs.writeFileSync('./database/antilink.json', JSON.stringify(antilink))
 											reply(`Succes mengaktifkan Fitur Antilink`)
@@ -2171,12 +2171,12 @@ Alasan : ${reason}`, [sender], true)
 									try {
 										if (!isGroupAdmins && !isOwner && !Ofc.key.fromMe) return reply(mess.only.admin)
 										if (args[0].toLowerCase() === 'on'){
-											if (isAntro) return reply(`Sudah Di Aktifkan Sebelumnya!`)
+											if (isAntro) return reply(`udah aktif banh`)
 											atro.push(from)
 											fs.writeFileSync('./database/ATO.json', JSON.stringify(atro))
 											reply(`Succes mengaktifkan Fitur Anti-Troli`)
 											} else if (args[0].toLowerCase() === 'off'){
-												if (!isAntro) return reply(`Fitur Ini Belum Pernah Di Aktifkan Di Group Ini`)
+												if (!isAntro) return reply(`Fitur Ini Blom perna nyala di gc ini`)
 												var ou = atro.indexOf(from)
 												atro.splice(ou, 1)
 												fs.writeFileSync('./database/ATO.json', JSON.stringify(atro))
@@ -2813,7 +2813,7 @@ Alasan : ${reason}`, [sender], true)
 										"displayName": `${ini_list.length} kontak`,
 										"contacts": ini_list 
 										}, 'contactsArrayMessage', { quoted: Ofc })
-										Zeeone.sendMessage(from, `Nih Kak Contact Owner Ku ✨`, text, {quoted: hehe})
+										Zeeone.sendMessage(from, `Nih Kak owner ku yg ganteng ✨`, text, {quoted: hehe})
 										}
 										break
 						case 'lirik':
@@ -3574,7 +3574,7 @@ break
 									const B11 = groupMembers
 									const C11 = A11[Math.floor(Math.random() * A11.length)] 
 									const C22 = B11[Math.floor(Math.random() * B11.length)]
-									D11 = `*「 JADIAN 」*\n\n@${C11.jid.split('@')[0]} ❤ @${C22.jid.split('@')[0]}\n\nMogaa Langgeng 😘`  
+									D11 = `*「 JADIAN 」*\n\n@${C11.jid.split('@')[0]} ❤ @${C22.jid.split('@')[0]}\n\nMogaa Anak nya 2000 awoakwoakawok 😘`  
 									jds.push(C11.jid)
 									jds.push(C22.jid)
 									mentions(D11, jds, true)
